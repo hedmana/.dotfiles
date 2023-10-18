@@ -48,7 +48,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -185,4 +185,4 @@ bar {
         status_command i3status
 }
 
-exec_always feh --bg-fill /home/hedu/Pictures/Wallpapers/daft_punk.jpg
+exec_always nitrogen --restore
