@@ -10,5 +10,6 @@ Clone into home directory --> GNU Stow (https://www.youtube.com/watch?v=y6XCebnB
 
 **Additional Packages:**
 ```bash 
-vim waybar otf-font-awesome hyprpaper firefox flatpak kitty # (foot in virtualbox as kitty wont work)
+git vim waybar otf-font-awesome hyprpaper ranger stow firefox flatpak kitty 
 ```
+
