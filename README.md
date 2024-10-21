@@ -1,12 +1,11 @@
 # .dotfiles
 
-Clone into home directory --> GNU Stow (https://www.youtube.com/watch?v=y6XCebnB9gs)
+Clone into home directory --> ```cd .dotfiles && stow .``` 
 
 ## Arch Install
 
 **Profile:**
 - Desktop: Hyprland
-- Remember to select correct graphics driver
 
 **Additional Packages:**
 ```bash 
