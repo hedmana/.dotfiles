@@ -5,10 +5,10 @@ Clone into home directory --> ```cd .dotfiles && stow .```
 ## Arch Install
 
 **Profile:**
-- Desktop: Hyprland
+- Desktop - Hyprland
 
 **Additional Packages:**
 ```bash 
-git vim neovim stow flatpak ranger firefox kitty
+git vim neovim stow wget unzip flatpak ranger neofetch kitty
 ```
 
