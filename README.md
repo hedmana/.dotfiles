@@ -9,6 +9,6 @@ Clone into home directory --> ```cd .dotfiles && stow .```
 
 **Additional Packages:**
 ```bash 
-git vim waybar otf-font-awesome hyprpaper ranger stow firefox flatpak kitty 
+git vim neovim stow flatpak ranger firefox kitty
 ```
 
