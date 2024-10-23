@@ -16,7 +16,14 @@ git vim neovim stow wget unzip flatpak ranger hyprpaper waybar neofetch kitty bl
 
 **Wifi:**
 ```bash 
+# List networks
+nmcli d wifi list
 
+# Connect to network
+nmcli d wifi connect <SSID> password <password>
+
+# Disconnect from network
+nmcli con down id <SSID>
 ```
 
 **Bluetooth:**
