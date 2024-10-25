@@ -1,0 +1,100 @@
+@import "./mocha.css";
+
+* {
+    border: none;
+    font-family: "Hacker Nerd Font, Hacker NF";
+    font-size: 10px;
+    color: @lavendel;
+}
+
+window#waybar {
+    /* background: transparent; */
+    background: transparent;
+    margin: 1px;
+}
+
+tooltip {
+    border-radius: 5px;
+    background: @mantle;
+    color: @lavendel;
+}
+  
+tooltip label{
+    color: @lavendel;
+}
+  
+#custom-logo {
+    padding: 0 10px;
+}
+
+.modules-right {
+  /* border: 1px solid lighter(@active); */
+  /* border: 1px solid @active; */
+  border-radius: 15px 0px 0px 15px;
+  padding: 0px 5px;
+  margin: 6px 0px;
+  background: @mantle;
+  opacity: 0.9;
+}
+
+.modules-center {
+  /* border: 1px solid lighter(@active); */
+  /* border: 1px solid @active; */
+  padding: 0 3px;
+  margin-top: 6px;
+  border-radius: 15px 15px 15px 15px;
+  background: @mantle;
+  opacity: 0.9;
+}
+
+.modules-left {
+  /* border: 1px solid lighter(@active); */
+  /* border: 1px solid @active; */
+  padding: 0px 5px;
+  border-radius: 0px 15px 15px 0px;
+  margin: 6px 0px; 
+  background: @mantle;
+  opacity: 0.9;
+}
+
+#battery,
+#cpu,
+#disk,
+#memory,
+#network,
+#temperature {
+    padding: 0 5px;
+    color: @lavendel;
+}
+#clock {
+    padding: 0 5px;
+    color: @blue;
+}
+
+#battery.charging {
+    color: @mantle;
+    background-color: @green;
+}
+
+#battery.warning:not(.charging) {
+    background-color: @yellow;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    color: @mantle;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
