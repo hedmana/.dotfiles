@@ -1,0 +1,51 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 14,
+    "margin-bottom": 0,
+    "margin-left": 14,
+    "margin-right": 14,
+    "height": 12,
+    "spacing": 5,
+    "reload_style_on_change": true,
+
+    "inlcude": [
+        "~/.config/waybar/modules"
+    ],
+
+    "modules-left": [
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "clock",
+        "custom/logo"
+    ],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+          "urgent": "",
+          "active": "",
+          "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 4
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M:%S}",
+        "tooltip": false
+    },
+
+    "custom/logo": {
+        "format": ""
+    }
+}

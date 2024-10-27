@@ -9,7 +9,7 @@ Clone into home directory --> ```cd .dotfiles && stow .```
 
 **Additional Packages:**
 ```bash 
-git vim neovim stow wget unzip flatpak ranger hyprpaper waybar neofetch kitty bluez bluez-utils
+rofi git vim neovim stow wget unzip flatpak ranger hyprpaper waybar neofetch kitty bluez bluez-utils
 ```
 
 ## Useful Commands
