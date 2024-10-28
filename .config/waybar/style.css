@@ -151,17 +151,6 @@ tooltip label {
 }
 
 #custom-appmenu {
-    background-color: @mantle;
-    color: @lavender;
-    border-radius: 15px;
-    padding: 0px 8px 0px 5px;
-    margin: 3px 0px 3px 0px;
-    opacity: 0.8;
-    border: 3px solid @lavender;
-    transition: all 0.3s ease-in-out;
-}
-
-#custom-appmenu:hover {
     background-color: @lavender;
     color: @mantle;
     border-radius: 15px;
@@ -169,6 +158,17 @@ tooltip label {
     margin: 3px 0px 3px 0px;
     opacity: 0.8;
     border: 3px solid @mantle;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-appmenu:hover {
+    background-color: @mantle;
+    color: @lavender;
+    border-radius: 15px;
+    padding: 0px 8px 0px 5px;
+    margin: 3px 0px 3px 0px;
+    opacity: 0.8;
+    border: 3px solid @lavender;
 }
 
 #network {
