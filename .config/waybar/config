@@ -23,6 +23,7 @@
 
     "modules-right": [
         "pulseaudio",
+        "bluetooth",
         "network",
         "clock",
         "battery",
@@ -52,7 +53,8 @@
 
     "custom/logo": {
         "format": "",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": ""
     },
 
     "battery": {
@@ -60,7 +62,7 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 20
+            "critical": 10
         },
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
@@ -79,7 +81,8 @@
 
     "clock": {
         "format": "{:%H:%M %a}",
-        "tooltip": false,
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "on-click": "firefox -new-tab 'https://calendar.google.com/calendar/u/0/r'" 
     },
 
@@ -93,9 +96,22 @@
         "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\nup: {bandwidthUpBits} down: {bandwidthDownBits}",
         "tooltip-format-disconnected": "󰤯",
         "max-length": 50,
-        "on-click": "~/.dotfiles/.config/scripts/rofi-wifi-menu.sh",
+        "on-click": "~/.config/scripts/rofiWifi/rofi-wifi-menu.sh",
         "on-click-right": "wihotspot"
     },
+
+    "bluetooth": {
+        "format-on": "",
+        "format-off": "",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂴",
+        "format-connected-battery": "󰂴",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "~/.config/scripts/rofi-bluetooth"
+    }, 
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
