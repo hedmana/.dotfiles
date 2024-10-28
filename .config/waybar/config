@@ -93,7 +93,8 @@
         "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\nup: {bandwidthUpBits} down: {bandwidthDownBits}",
         "tooltip-format-disconnected": "󰤯",
         "max-length": 50,
-        "on-click": "~/.dotfiles/.config/scripts/rofi-wifi-menu.sh"
+        "on-click": "~/.dotfiles/.config/scripts/rofi-wifi-menu.sh",
+        "on-click-right": "wihotspot"
     },
 
     "pulseaudio": {
