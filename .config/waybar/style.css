@@ -2,6 +2,7 @@
 
 * {
     font-family: "Hack Nerd Font";
+    font-size: 12px;
     text-shadow: none;
     border: none;
     border-radius: 0px;
@@ -25,7 +26,6 @@ window#waybar {
     font-weight: bold;
     font-style: normal;
     opacity: 0.8;
-    font-size: 16px;
     color: @mantle;
 }
 
@@ -58,17 +58,32 @@ window#waybar {
 
 tooltip {
     border-radius: 10px;
-    background-color: @mantle;
-    opacity: 0.8;
-    padding: 20px;
+    background-color: @lavender;
+    opacity: 0.9;
+    padding: 10px;
     margin: 0px;
 }
 
+tooltip label {
+    color: @mantle;
+    font-size: 16px;
+}
+
 #custom-logo {
+    background-color: @lavender;
+    color: @mantle;
+    border-radius: 15px;
+    padding: 0px 10px 0px 5px;
+    margin: 3px 0px 3px 0px;
+    opacity: 0.9;
+    border: 3px solid @mantle;
+}
+
+#battery {
     background-color: @mantle;
     color: @lavender;
     border-radius: 15px;
-    padding: 0px 10px 0px 5px;
+    padding: 0px 10px 0px 10px;
     margin: 3px 0px 3px 0px;
     opacity: 0.8;
     border: 3px solid @lavender;
@@ -82,4 +97,39 @@ tooltip {
     margin: 3px 0px 3px 0px;
     opacity: 0.8;
     border: 3px solid @lavender;
+}
+
+#custom-appmenu {
+    background-color: @mantle;
+    color: @lavender;
+    border-radius: 15px;
+    padding: 0px 8px 0px 5px;
+    margin: 3px 0px 3px 0px;
+    opacity: 0.8;
+    border: 3px solid @lavender;
+}
+
+#network {
+    background-color: @mantle;
+    color: @lavender;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 0px 3px 0px;
+    opacity: 0.8;
+    border: 3px solid @lavender;
+}
+
+#pulseaudio {
+    background-color: @mantle;
+    color: @lavender;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 0px 3px 0px;
+    opacity:0.8;
+    border: 3px solid @lavender;
+}
+
+#pulseaudio.muted {
+    background-color: @mantle;
+    color: @lavender;
 }
