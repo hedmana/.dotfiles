@@ -98,7 +98,7 @@
 
     "pulseaudio": {
         "format": "{icon}  {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": " 0%",
         "format-muted": " 0%",
         "format-source": "{volume}% ",
