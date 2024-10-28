@@ -7,4 +7,4 @@
 - Pacman:
     - ```rofi git vim neovim stow wget unzip flatpak ranger hyprpaper waybar neofetch kitty bluez bluez-utils```
 - AUR:
-    - ```linux-wifi-hotspot rofi-bluetooth-git visual-studio-code-bin```
+    - ```linux-wifi-hotspot visual-studio-code-bin```
