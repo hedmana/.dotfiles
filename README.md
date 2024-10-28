@@ -5,7 +5,9 @@ Clone into home directory --> ```cd .dotfiles && stow .```
 ## Arch Install
 
 **Profile:**
-- Desktop - Hyprland
+- Bootloader: Systemd-boot
+- Desktop: Hyprland
+- Audio server: pulseaudio
 
 **Additional Packages:**
 ```bash 
