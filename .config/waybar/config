@@ -14,7 +14,11 @@
     ],
 
     "modules-left": [
-        "custom/appmenu"
+        "custom/appmenu",
+        "disk",
+        "cpu",
+        "memory",
+        "temperature"
     ],
 
     "modules-center": [
@@ -36,6 +40,33 @@
         "tooltip": false
     },
 
+    "cpu": {
+        "format": "|   {usage}%",
+        "interval": 1,
+        "tooltip": true,
+        "max-length": 10
+    },
+    
+    "disk": {
+        "format": "  {percentage_used}%",
+        "tooltip": true,
+        "interval": 10,
+        "path": "/"
+    },
+    
+    "memory": {
+        "format": "|   {percentage}%",
+        "interval": 5,
+        "tooltip": true,
+        "max-length": 15
+    },
+    
+    "temperature": {
+        "format": "|  {temperatureC}°C",
+        "interval": 5,
+        "tooltip": true
+    },
+
     "hyprland/workspaces": {
         "on-click": "activate",
         "active-only": false,
@@ -54,7 +85,7 @@
     "custom/logo": {
         "format": "",
         "tooltip": false,
-        "on-click": ""
+        "on-click": "wlogout"
     },
 
     "battery": {
