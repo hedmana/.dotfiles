@@ -2,7 +2,7 @@
 
 ## Setup nix-shell environments
 
-**Python venv**
+**Python**
 
 ```python
 with import <nixpkgs> {};
@@ -17,17 +17,6 @@ mkShell {
   
   shellHook = ''
     export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH
-
-    # Create virtual environment if it doesn't exist
-    if [ ! -d .venv ]; then
-      ${python311}/bin/python -m venv .venv
-    fi
-    
-    # Activate the virtual environment
-    source .venv/bin/activate
-    
-    # Optional: Upgrade pip to latest version
-    pip install --upgrade pip
   '';
 }
 
