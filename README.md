@@ -1,10 +1,6 @@
 # .dotfiles
 
-## Arch
-- Desktop env: Hyprland
-- Bootloader: Systemd-boot
-- Audio server: pulseaudio
-- Pacman:
-    - ```rofi git vim neovim stow wget unzip brightnessctl flatpak ranger hyprpaper waybar neofetch kitty bluez bluez-utils```
-- AUR:
-    - ```linux-wifi-hotspot visual-studio-code-bin```
+- distro: NixOS
+
+## Nix-shell environments
+
