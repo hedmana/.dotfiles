@@ -90,16 +90,16 @@
   environment.systemPackages = with pkgs; [
     git
     vim
-    wget
-    curl
     zip
     unzip
+    wget
+    curl
     gcc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are started in user sessions. 
   # programs.mtr.enable = true; programs.gnupg.agent = {
-  #   enable = true; enableSSHSupport = true;
+  #   enable = true; enableSSHSpport = true;
   # };
 
   # List services that you want to enable:
