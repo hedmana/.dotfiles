@@ -32,10 +32,10 @@
     hello
     neofetch
     vscode
+    alacritty
     ranger
     texliveFull
     nerdfonts
-    alacritty
     spotify
     discord
     telegram-desktop
@@ -86,7 +86,9 @@
   #  /etc/profiles/per-user/knappen/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "vscode";
+    TERMINAL = "alacritty";
+    BROWSER = "firefox";
   };
 
   # Bash config
@@ -94,4 +96,30 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Custom keybindings for GNOME
+  dconf.settings = {
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+      ];
+    };
+
+    # Existing Alacritty shortcut
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Open Terminal";
+      binding = "<Super>t";
+      command = "alacritty";
+      type = "application";
+    };
+
+    # New Firefox shortcut
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      name = "Open Firefox";
+      binding = "<Super>f";
+      command = "firefox";
+      type = "application";
+    };
+  };
 }
