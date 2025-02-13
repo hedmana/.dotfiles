@@ -24,11 +24,16 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Modules
+  imports = [
+    ./modules/alacritty.nix
+    ./modules/starship.nix
+  ];
+
   home.packages = with pkgs; [
     hello
     neofetch
     vscode
-    alacritty
     ranger
     texliveFull
     nerdfonts
@@ -71,11 +76,11 @@
     BROWSER = "firefox";
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
   # Bash config
   programs.bash.enable = true;
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
 
   # Custom keybindings for GNOME
   dconf.settings = {
