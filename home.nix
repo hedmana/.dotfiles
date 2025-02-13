@@ -24,11 +24,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
     hello
     neofetch
     vscode
@@ -69,33 +65,17 @@
     # '';
   };
 
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/knappen/etc/profile.d/hm-session-vars.sh
-  #
   home.sessionVariables = {
     EDITOR = "vscode";
     TERMINAL = "alacritty";
     BROWSER = "firefox";
   };
 
-  # Bash config
-  programs.bash.enable = true;
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Bash config
+  programs.bash.enable = true;
 
   # Custom keybindings for GNOME
   dconf.settings = {
@@ -106,7 +86,7 @@
       ];
     };
 
-    # Existing Alacritty shortcut
+    # Alacritty
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Open Terminal";
       binding = "<Super>t";
@@ -114,7 +94,7 @@
       type = "application";
     };
 
-    # New Firefox shortcut
+    # Firefox
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       name = "Open Firefox";
       binding = "<Super>f";
