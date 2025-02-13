@@ -20,12 +20,13 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
-
+  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # Modules
   imports = [
+    ./modules/vim.nix
     ./modules/alacritty.nix
     ./modules/starship.nix
   ];

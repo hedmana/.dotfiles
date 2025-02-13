@@ -1,6 +1,6 @@
 # NixOS config
 
-## Setup nix-shell environments
+## Shell environments
 
 **Python**
 
