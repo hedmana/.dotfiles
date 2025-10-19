@@ -1,3 +1,6 @@
+-- Init lazy.nvi
+require("config.lazy")
+
 -- Line numbering
 vim.opt.number = true
 vim.opt.relativenumber = true
