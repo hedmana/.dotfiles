@@ -5,10 +5,20 @@ return {
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "whoissethdaniel/mason-tool-installer.nvim", -- Auto-install tools
       "hrsh7th/cmp-nvim-lsp", -- Autocompletion capabilities for LSP
     },
     config = function()
       require("mason").setup()
+
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "prettier", -- Prettier formatter
+          "stylua", -- Lua formatter
+          "isort", -- Python formatter
+          "black", -- Python formatter
+        },
+      })
       
       require("mason-lspconfig").setup({
         -- Ensure these servers are installed
