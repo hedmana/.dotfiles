@@ -51,3 +51,5 @@ alias python="python3"
 alias pip="pip3"
 
 
+# Added by Antigravity
+export PATH="/Users/hedmana/.antigravity/antigravity/bin:$PATH"
