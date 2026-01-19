@@ -53,3 +53,14 @@ alias pip="pip3"
 
 # Added by Antigravity
 export PATH="/Users/hedmana/.antigravity/antigravity/bin:$PATH"
+
+function zle-line-init {
+  echoti rmkx
+}
+
+function zle-line-finish {
+  echoti rmkx
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
