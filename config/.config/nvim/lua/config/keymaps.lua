@@ -76,6 +76,9 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", {
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", {
     desc = "Find help tags"
 })
+keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", {
+    desc = "Find git files"
+})
 
 -- LSP Keymaps
 vim.api.nvim_create_autocmd('LspAttach', {
