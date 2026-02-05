@@ -1,0 +1,16 @@
+# Appearance 
+font-size = 20
+font-family = "Hack Nerd Font"
+theme = Catppuccin Mocha
+
+window-colorspace = "display-p3"
+focus-follows-mouse = false
+cursor-style = block
+
+# Keybinds
+keybind = cmd+shift+j=unbind
+keybind = super+j=previous_tab
+keybind = super+k=next_tab 
+keybind = super+shift+j=move_tab:-1
+keybind = super+shift+k=move_tab:1
+
