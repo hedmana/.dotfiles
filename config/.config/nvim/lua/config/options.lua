@@ -8,7 +8,6 @@ local options = {
     hlsearch = true,
     incsearch = true,
     ignorecase = true,
-    ro = false,
     pumheight = 10,
     showmode = false,
     showtabline = 2,
@@ -37,7 +36,12 @@ local options = {
 }
 
 for k, v in pairs(options) do
-    vim.opt[k] = v
+    local ok, err = pcall(function()
+        vim.opt[k] = v
+    end)
+    if not ok and not string.match(err, "modifiable") then
+        vim.notify("Error setting option " .. k .. ": " .. err, vim.log.levels.WARN)
+    end
 end
 
 local ft_group = vim.api.nvim_create_augroup("FileTypeSpecific", {
