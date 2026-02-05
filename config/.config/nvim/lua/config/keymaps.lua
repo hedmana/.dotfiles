@@ -63,6 +63,16 @@ keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", {
     desc = "Refresh file explorer"
 })
 
+-- Toggle line wrapping
+keymap.set("n", "<leader>tw", function()
+    vim.opt.wrap:toggle()
+    local wrap_status = vim.opt.wrap:get()
+    local status = wrap_status and "enabled" or "disabled"
+    vim.notify("Line wrapping " .. status, vim.log.levels.INFO)
+end, {
+    desc = "Toggle line wrapping"
+})
+
 -- Telescope Keymaps
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", {
     desc = "Find files"
