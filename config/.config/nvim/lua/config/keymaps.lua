@@ -65,7 +65,7 @@ keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", {
 
 -- Toggle line wrapping
 keymap.set("n", "<leader>tw", function()
-    vim.opt.wrap:toggle()
+    vim.opt.wrap = not vim.opt.wrap:get()
     local wrap_status = vim.opt.wrap:get()
     local status = wrap_status and "enabled" or "disabled"
     vim.notify("Line wrapping " .. status, vim.log.levels.INFO)
