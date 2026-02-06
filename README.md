@@ -1,5 +1,5 @@
-# MacOS .dotfiels
+# .dotfiles
 
 ```bash
-stow --target=$HOME pkgname
+stow --target=$HOME <pkgname>
 ```
