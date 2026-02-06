@@ -13,4 +13,3 @@ keybind = super+j=previous_tab
 keybind = super+k=next_tab 
 keybind = super+shift+j=move_tab:-1
 keybind = super+shift+k=move_tab:1
-
